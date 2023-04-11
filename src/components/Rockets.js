@@ -6,7 +6,6 @@ import '../App.css';
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
-  console.log('logging', rockets);
 
   useEffect(() => {
     dispatch(fetchRockets());
