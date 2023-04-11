@@ -14,7 +14,6 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    /*
     reserverRocket: (state, action) => {
       const rocketIndex = state.findIndex((rocket) => rocket.id === action.payload);
       if (rocketIndex !== -1) {
@@ -32,7 +31,7 @@ const rocketsSlice = createSlice({
         return newRockets;
       }
       return state;
-    }, */
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => action.payload);
