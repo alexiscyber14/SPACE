@@ -2,7 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
-import MissionsList from './components/Missions';
+import Mission from './components/Missions';
 import Rockets from './components/Rockets';
 import Profile from './components/Profile';
 
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<MissionsList />} />
+          <Route path="/missions" element={<Mission />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
