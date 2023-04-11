@@ -103,3 +103,92 @@ border-radius: 360px;
   /* end header css */
 
 
+  /* rockets structure css */
+
+  .main {
+    background-color:white;
+    margin-top: -25px;
+    padding-top: 4%;
+    padding-bottom: 1%;
+  }
+  
+  .homeContent {
+    background-color:white;
+    margin: 0% 7%;
+  }
+  
+  .rocket-list-item {
+    width: 100%;
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content:left;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+    padding: 0% 0%;
+  }
+     
+  .middle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0% 2%;
+  }
+  
+  .image-spina {
+    width: 200px;
+    height: auto;
+    margin-right: 0px;
+  }
+ 
+  .last h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: grey;
+    font-size: 17px;
+    padding-bottom: 2%;
+  }
+  .last p{
+    color: rgb(34, 34, 34);
+    margin: 0;
+  }
+  .last #reserved{
+    background-color: rgb(12, 212, 219);
+    margin: 5px;
+    border-radius: 3px;
+    padding: 2px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    align-items: center;
+
+    padding: 0px 10px;
+    text-transform: capitalize;
+
+  }
+  .last #button1 {
+    background-color: rgb(8, 154, 238);
+    border: none;
+    color: white;
+    padding: 1.2% 3%;
+    text-transform: uppercase;
+    font-weight: lighter;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .last #button2 {
+    background-color:transparent;
+    border: none;
+    color: black;
+    padding: 1.2% 3%;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: lighter;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  /* end Rockets structure css */
