@@ -35,7 +35,7 @@ const Rockets = () => {
                 <div className="list-details last">
                   <h2>{rocket.name}</h2>
                   <p>
-                    <span id="reserved">Reserved</span>
+                    {rocket.reserved ? <span id="reserved">Reserved</span> : null}
                     {rocket.description}
                   </p>
                   {rocket.reserved ? (
