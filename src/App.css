@@ -196,6 +196,7 @@ nav div ul .activated {
 .last #button2 {
   background-color: transparent;
   color: black;
+  display: none;
   padding: 1.2% 3%;
   border: 1px solid black;
   text-transform: uppercase;
