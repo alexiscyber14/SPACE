@@ -12,7 +12,7 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () =>
   console.log('rockets', rockets);
   return rockets;
 }); */
-export const fetchRockets = createAsyncThunk('books/fetchBooks', async () => {
+export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
   const response = await axios.get('https://api.spacexdata.com/v4/rockets');
   const rockets = Object.entries(response.data)
     .flatMap(([id, rocket]) => ({ ...rocket, id }));
