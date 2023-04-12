@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { fetchRockets } from '../redux/rockets/rocketsSlice';
-
 import '../App.css';
 
 const Header = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
 
   useEffect(() => {
     if (window.location.pathname === '/missions') {
