@@ -228,29 +228,18 @@ nav div ul .activated {
 .rocket-table {
   width: 30% !important;
 }
+
 /* profile css */
-.profile {
-  padding: 0% 20%;
+
+.profile-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
-.profile div {
-  width: 100%;
-}
-
-.profile div ul {
-  border: 1px solid rgb(85, 85, 85);
-  width: 100%;
-  padding: 0;
-  border-radius: 3px;
-}
-
-.profile div ul li {
-  list-style: none;
-  border-bottom: 1px solid rgb(85, 85, 85);
-  padding: 2% 5%;
+.mission-table,
+.rocket-table {
+  width: 30% !important;
 }
 
 /* end profile css */

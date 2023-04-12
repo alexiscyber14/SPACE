@@ -10,11 +10,10 @@ const Mission = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (!flag) {
-      console.log(1);
       dispatch(fetchMissonsAction());
       flag = true;
     }
-  }, []);
+  }, [dispatch]);
 
   const mission = useSelector((state) => state.missions);
 
