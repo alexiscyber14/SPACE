@@ -199,29 +199,37 @@ nav div ul .activated {
 
 /* end Rockets structure css */
 
+.table1 {
+  width: 95% !important;
+  margin: 0 auto;
+}
+
+.btn-container {
+  position: relative;
+  height: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.am-btn {
+  background-color: #18a2b8 !important;
+}
+
 /* profile css */
-.profile {
-  padding: 0% 20%;
+
+.profile-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
-.profile div {
-  width: 100%;
-}
-
-.profile div ul {
-  border: 1px solid rgb(85, 85, 85);
-  width: 100%;
-  padding: 0;
-  border-radius: 3px;
-}
-
-.profile div ul li {
-  list-style: none;
-  border-bottom: 1px solid rgb(85, 85, 85);
-  padding: 2% 5%;
+.mission-table,
+.rocket-table {
+  width: 30% !important;
 }
 
 /* end profile css */

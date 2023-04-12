@@ -3,11 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { reserveRocket, cancelReserve, fetchRockets } from '../redux/rockets/rocketsSlice';
 import '../App.css';
 
+let flag = false;
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchRockets());
+    if (!flag) {
+      dispatch(fetchRockets());
+      flag = true;
+    }
   }, [dispatch]);
 
   if (!rockets) {
