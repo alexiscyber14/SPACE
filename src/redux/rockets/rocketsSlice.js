@@ -1,6 +1,17 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+/*
+export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
+  const response = await axios.get('https://api.spacexdata.com/v4/rockets');
+  const rockets = response.data.map(({
+    id, rocket_name, description, flickr_images,
+  }) => ({
+    id, name: rocket_name, description, flickr_images,
+  }));
+  console.log('rockets', rockets);
+  return rockets;
+}); */
 export const fetchRockets = createAsyncThunk('books/fetchBooks', async () => {
   const response = await axios.get('https://api.spacexdata.com/v4/rockets');
   const rockets = Object.entries(response.data)
@@ -14,30 +25,30 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    reserverRocket: (state, action) => {
-      const rocketIndex = state.findIndex((rocket) => rocket.id === action.payload);
-      if (rocketIndex !== -1) {
-        const newRockets = [...state];
-        newRockets[rocketIndex] = { ...newRockets[rocketIndex], reserved: true };
-        return newRockets;
-      }
-      return state;
+    reserveRocket: (state, action) => {
+      const reservedRocketId = action.payload;
+      const reservedRocketName = action.payload;
+      const newState = state.map((rocket) => {
+        if (rocket.id !== reservedRocketId && rocket.name !== reservedRocketName) return rocket;
+        return { ...rocket, reserved: true };
+      });
+      return newState;
     },
     cancelReserve: (state, action) => {
-      const rocketIndex = state.findIndex((rocket) => rocket.id === action.payload);
-      if (rocketIndex !== -1) {
-        const newRockets = [...state];
-        newRockets[rocketIndex] = { ...newRockets[rocketIndex], reserved: false };
-        return newRockets;
-      }
-      return state;
+      const canceledRocketId = action.payload;
+      const newState = state.map((rocket) => {
+        if (rocket.id !== canceledRocketId) return rocket;
+        return { ...rocket, reserved: false };
+      });
+      return newState;
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchRockets.fulfilled, (state, action) => action.payload);
+    builder
+      .addCase(fetchRockets.fulfilled, (state, action) => action.payload);
   },
 });
 
-export const { reserverRocket, cancelReserve, updateMission } = rocketsSlice.actions;
+export const { reserveRocket, cancelReserve } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
