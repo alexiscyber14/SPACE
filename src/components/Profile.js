@@ -18,7 +18,6 @@ const Profile = () => {
               {reservedRockets.map((rocket) => (
                 <li key={rocket.id}>
                   <span>{rocket.name}</span>
-                  <span>{rocket.id}</span>
                 </li>
               ))}
             </ul>
