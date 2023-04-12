@@ -1,4 +1,4 @@
-//check if the rockets datat is fetched from the spaceX Api
+// check if the rockets datat is fetched from the spaceX Api
 const fetchRockets = async () => {
   const response = await fetch('https://api.spacexdata.com/v4/rockets');
   const rockets = await response.json();
