@@ -3,17 +3,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import { fetchMissonsAction } from '../redux/missions/missions';
 import MissionItem from './MissionItem';
+import '../App.css';
 
+let flag = false;
 const Mission = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchMissonsAction());
+    if (!flag) {
+      dispatch(fetchMissonsAction());
+      flag = true;
+    }
   }, [dispatch]);
 
   const mission = useSelector((state) => state.missions);
 
   return (
-    <Table striped bordered hover responsive="sm">
+    <Table className="table1" striped bordered hover responsive="sm">
       <thead>
         <tr>
           <th>Mission</th>
@@ -26,8 +31,10 @@ const Mission = () => {
         {mission.map((item) => (
           <MissionItem
             key={item.mission_id}
+            id={item.mission_id}
             missionName={item.mission_name}
             missionDesc={item.description}
+            reserved={item.reserved ? item.reserved : false}
           />
         ))}
       </tbody>

@@ -206,3 +206,33 @@ nav div ul .activated {
 }
 
 /* end Rockets structure css */
+
+.table1 {
+  width: 95% !important;
+  margin: 0 auto;
+}
+
+.btn-container {
+  position: relative;
+  height: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.am-btn {
+  background-color: #18a2b8 !important;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mission-table,
+.rocket-table {
+  width: 30% !important;
+}
