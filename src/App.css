@@ -102,14 +102,6 @@ nav div ul li a:hover::after {
   width: calc(100%);
 }
 
-nav div ul .profile {
-  background-color: white;
-  box-shadow: 2px 2px 8px grey;
-  height: 30px;
-  width: 30px;
-  border-radius: 360px;
-}
-
 nav div ul .activated {
   border-bottom: 2px solid rgb(51, 201, 247);
 }
@@ -207,6 +199,7 @@ nav div ul .activated {
 
 /* end Rockets structure css */
 
+<<<<<<< HEAD
 .table1 {
   width: 95% !important;
   margin: 0 auto;
@@ -236,3 +229,31 @@ nav div ul .activated {
 .rocket-table {
   width: 30% !important;
 }
+=======
+/* profile css */
+.profile {
+  padding: 0% 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.profile div {
+  width: 100%;
+}
+
+.profile div ul {
+  border: 1px solid rgb(85, 85, 85);
+  width: 100%;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.profile div ul li {
+  list-style: none;
+  border-bottom: 1px solid rgb(85, 85, 85);
+  padding: 2% 5%;
+}
+
+/* end profile css */
+>>>>>>> dev
