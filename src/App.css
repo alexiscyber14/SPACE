@@ -37,12 +37,16 @@ nav div {
 .logo-container .logo {
   color: white;
   font-weight: bold;
+  display: flex;
+  margin: 1% 0%;
+  flex-direction: row;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
 }
 
-.logo-container .logo #lock {
-  font-size: 30px;
-  margin-right: 2px;
+.logo-container .logo img {
+  margin-right: 5px;
+  width: 80px;
 }
 
 nav div ul li a {
