@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+}
+
+/* start header css */
+header {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgb(65, 65, 65);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo-container {
+  border-right: 2px solid white;
+  padding: 0% 1%;
+}
+
+.logo-container .logo {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  margin: 1% 0%;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-container .logo img {
+  margin-right: 5px;
+  width: 80px;
+}
+
+nav div ul li a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(51, 201, 247);
+  font-size: 16px;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-container .logo a {
+  text-decoration: none;
+  color: rgb(37, 36, 36);
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+}
+
+.logo-container .logo .trade {
+  color: rgb(70, 68, 68);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 5px;
+  font-weight: bold;
+  margin-bottom: -15px;
+  margin-left: 2px;
+}
+
+nav div ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+nav div ul li {
+  list-style: none;
+}
+
+nav div ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: rgb(51, 201, 247);
+  transition: width 0.2s ease-out;
+}
+
+nav div ul li a:hover::after {
+  width: calc(100%);
+}
+
+nav div ul .activated {
+  border-bottom: 2px solid rgb(51, 201, 247);
+}
+
+/* end header css */
+
+/* rockets structure css */
+
+.main {
+  background-color: white;
+  margin-top: -25px;
+  padding-top: 4%;
+  padding-bottom: 1%;
+}
+
+.homeContent {
+  background-color: white;
+  margin: 0% 7%;
+}
+
+.rocket-list-item {
+  width: 100%;
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  padding: 0% 0%;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0% 2%;
+}
+
+.image-spina {
+  width: 200px;
+  height: auto;
+  margin-right: 0;
+}
+
+.last h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: grey;
+  font-size: 17px;
+  padding-bottom: 2%;
+}
+
+.last p {
+  color: rgb(34, 34, 34);
+  margin: 0;
+}
+
+.last #reserved {
+  background-color: rgb(12, 212, 219);
+  margin: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 0 10px;
+  text-transform: capitalize;
+}
+
+.last #button1 {
+  background-color: rgb(8, 154, 238);
+  border: none;
+  color: white;
+  padding: 1.2% 3%;
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.last #button2 {
+  background-color: transparent;
+  color: black;
+  padding: 1.2% 3%;
+  border: 1px solid black;
+  text-transform: uppercase;
+  font-weight: lighter;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* end Rockets structure css */
+
+.table1 {
+  width: 95% !important;
+  margin: 0 auto;
+}
+
+.btn-container {
+  position: relative;
+  height: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.am-btn {
+  background-color: #18a2b8 !important;
+}
+
+/* profile css */
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.mission-table,
+.rocket-table {
+  width: 30% !important;
+}
+
+/* end profile css */
